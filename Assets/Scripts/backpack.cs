@@ -30,7 +30,6 @@ public class backpack : MonoBehaviour
     {
         string slotName = "Place (" + placesAmount.ToString() + ")";
         GameObject itemSlot = GameObject.Find(slotName);
-        print(itemSlot + " " + slotName);
         itemSlot.GetComponent<Text>().text = name;
         placesAmount++;
         GameObject backPack = GameObject.Find("BackpackView");
