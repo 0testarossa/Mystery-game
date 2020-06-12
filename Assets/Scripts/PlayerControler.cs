@@ -75,11 +75,12 @@ public class PlayerControler : MonoBehaviour
             transform.Rotate(0, 0, 0);
         }
 
-        if (controller.isGrounded)
-        {
+        //if (controller.isGrounded)
+        //{
 
             if (Input.GetKey(KeyCode.W))
             {
+                print("W");
                 anim.SetBool("isRunning", true);
                 moveDir = Vector3.forward;
                 moveDir *= speed;
@@ -88,6 +89,7 @@ public class PlayerControler : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.S))
             {
+                print("S");
                 anim.SetBool("isRunning", true);
                 moveDir = new Vector3(0, 0, -1);
                 moveDir *= speed;
@@ -95,6 +97,7 @@ public class PlayerControler : MonoBehaviour
             }
             else
             {
+                print("STOP");
                 anim.SetBool("isRunning", false);
             }
 
@@ -105,7 +108,7 @@ public class PlayerControler : MonoBehaviour
                 moveDir.y = jumpSpeed;
             }
 
-        }
+        //}
 
         if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
         {
