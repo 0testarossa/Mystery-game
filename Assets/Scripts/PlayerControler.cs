@@ -80,7 +80,6 @@ public class PlayerControler : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W))
             {
-                print("W");
                 anim.SetBool("isRunning", true);
                 moveDir = Vector3.forward;
                 moveDir *= speed;
@@ -89,7 +88,6 @@ public class PlayerControler : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                print("S");
                 anim.SetBool("isRunning", true);
                 moveDir = new Vector3(0, 0, -1);
                 moveDir *= speed;
@@ -97,7 +95,6 @@ public class PlayerControler : MonoBehaviour
             }
             else
             {
-                print("STOP");
                 anim.SetBool("isRunning", false);
             }
 
